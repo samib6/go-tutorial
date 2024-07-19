@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-	//////////////////////
+	////////////////////////
 	// Integers
 	var intvar int
 	intvar = 3383010

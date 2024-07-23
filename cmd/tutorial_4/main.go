@@ -45,4 +45,48 @@ func main() {
 	// size of current array
 	// and copies all elements from original array to this new location
 
+	// To insert multiple values we can use spread operator ...
+	var slice2 []int16 = []int16{1, 2}
+	slice2 = append(arr1, slice2...)
+	fmt.Println(slice2)
+
+	var slice3 []int16 = make([]int16, 3, 8) // param2 is length , param 3 is capacity
+	fmt.Println(slice3)
+
+	//Maps
+
+	//Declaration - way 1
+	var map1 map[string]uint8 = make(map[string]uint8)
+	fmt.Println(map1)
+
+	var map2 map[string]uint8 = map[string]uint8{"Adam": 8, "Roza": 10}
+	fmt.Println(map2["Roza"])
+
+	//Interesting - By default even if key doesnt exists
+	// Go will return default value for the data type eg - 0 for ints
+	// 2 values are returned from map[key] , first is value, second is boolean
+	// which denotes if key exists or not
+	delete(map2, "Adam")
+	var age, doesKeyExists = map2["Adam"]
+	fmt.Println(age, doesKeyExists)
+	if doesKeyExists {
+		fmt.Println(age, doesKeyExists)
+	} else {
+		fmt.Println("Key does not exists")
+	}
+
+	// Iterate - Maps Loops
+	for name, age := range map2 {
+		fmt.Printf("\n Name: %v and Age is %v", name, age)
+	}
+
+	// Iterate - Arrays
+	for index, value := range slice2 {
+		fmt.Printf("\n Index is %v and value is %v", index, value)
+	}
+
+	for i := 0; i < 10; i++ { // shorthands op - i*=1 , i/=10 etc
+		fmt.Println(i)
+	}
+
 }

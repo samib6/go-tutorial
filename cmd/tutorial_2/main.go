@@ -9,7 +9,7 @@ func main() {
 
 	////////////////////////
 	// Integers
-	var intvar int
+	var intvar int // WAY 1 OF DECLARATION
 	intvar = 3383010
 	fmt.Println(intvar)
 
@@ -31,7 +31,7 @@ func main() {
 
 	//////////////////////
 	// Strings //////////
-	a := "er"
+	a := "er" // WAY 2 OF DECLARATION
 	fmt.Println(a)
 
 	str_b := "single line string, use double quotes"
@@ -66,7 +66,7 @@ func main() {
 	fmt.Println(res)
 
 	// Boolean
-	var boolVar = true // another way of declaring variables
+	var boolVar = true // WAY 3 - another way of declaring variables
 	fmt.Println(boolVar)
 
 }
